@@ -81,8 +81,8 @@
 - 각 케이스가 종료되기 전 매번 실행
 
 > All → static
-Each → !static
-> 
+
+> Each → !static
 
 <aside>
 💡 AssertJ
