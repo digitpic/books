@@ -1,8 +1,8 @@
 
-<aside>
-💡 테스트 코드
+ 
+## 테스트 코드
 
-</aside>
+ 
 
 - 작성한 코드가 의도대로 잘 동작하는지,
 - 예상하지 못한 문제가 없는지 확인 하는 목적으로 작성하는 코드
@@ -10,10 +10,10 @@
 > 유지 보수에 좋고 코드 수정 시에 기존 기능의 동작 여부 확인 가능하다는 장점이 존재
 > 
 
-<aside>
-💡 given-when-then 패턴
+ 
+## given-when-then 패턴
 
-</aside>
+ 
 
 - given
     - 테스트 준비 단계
@@ -22,61 +22,61 @@
 - then
     - 테스트 검증 단계
 
-<aside>
-💡 JUnit
+ 
+## JUnit
 
-</aside>
+ 
 
 - 자바를 위한 단위 테스트 프레임워크
 
-<aside>
-💡 단위 테스트
+ 
+## 단위 테스트
 
-</aside>
+ 
 
 - 작은 단위로 검증
 - 보통 메서드 단위
 
-<aside>
-💡 @SpringBootTest
+ 
+## @SpringBootTest
 
-</aside>
+ 
 
 - 테스트를 수행하는 클래스
 - 테스트용 애플리케이션 컨텍스트 생성
 
-<aside>
-💡 @Test
+ 
+## @Test
 
-</aside>
+ 
 
 - 테스트를 수행하는 메서드
 
-<aside>
-💡 @BeforeAll
+ 
+## @BeforeAll
 
-</aside>
+ 
 
 - 전체 테스트 시작 전 처음으로 한 번만 실행
 
-<aside>
-💡 @BeforeEach
+ 
+## @BeforeEach
 
-</aside>
+ 
 
 - 각 케이스를 시작하기 전 매번 실행
 
-<aside>
-💡 @AfterAll
+ 
+## @AfterAll
 
-</aside>
+ 
 
 - 전체 테스트 종료 전 한 번만 실행
 
-<aside>
-💡 @AfterEach
+ 
+## @AfterEach
 
-</aside>
+ 
 
 - 각 케이스가 종료되기 전 매번 실행
 
@@ -84,17 +84,17 @@
 
 > Each → !static
 
-<aside>
-💡 AssertJ
+ 
+## AssertJ
 
-</aside>
+ 
 
 - JUnit과 함께 사용해 검증문의 가독성을 높이는 라이브러리
 
-<aside>
-💡 @AutoConfigureMockMvc
+ 
+## @AutoConfigureMockMvc
 
-</aside>
+ 
 
 - MockMvc 생성 및 자동 구성
 - 애플리케이션을 서버에 배포하지 않고, 테스트용 MVC 환경을 만들어 요청, 전송, 응답 기능 제공하는 유틸리티 클래스
