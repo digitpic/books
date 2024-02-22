@@ -1,73 +1,73 @@
 
-<aside>
-💡 DBMS (=Database Management System)
+ 
+## DBMS (=Database Management System)
 
-</aside>
+ 
 
 - 데이터베이스를 관리하기 위한 소프트웨어
 
-<aside>
-💡 RDBMS (=Relational DBMS)
+ 
+## RDBMS (=Relational DBMS)
 
-</aside>
+ 
 
 - 관계형 모델(=테이블) 기반으로 하는 DBMS
 - 기본키를 통한 행 식별
 
-<aside>
-💡 H2
+ 
+## H2
 
-</aside>
+ 
 
 - 자바로 작성된 RDBMS
 - 스프링 부트가 지원하는 인메모리 관계형 데이터베이스
 - 애플리케이션 외부에 저장하지 않고 스프링 부트 애플리케이션 자체 내부에 저장하기에 재실행 할 때마다 초기화
 - 개발 시에 테스트 용도로 사용
 
-<aside>
-💡 테이블
+ 
+## 테이블
 
-</aside>
+ 
 
 - 행과 열로 구성된 데이터를 구성하기 위한 가장 기본적인 단위
 
-<aside>
-💡 행
+ 
+## 행
 
-</aside>
+ 
 
 - 테이블의 가로로 배열된 데이터의 집합
 - 반드시 고유한 식별자인 기본키를 가진다
 
-<aside>
-💡 열
+ 
+## 열
 
-</aside>
+ 
 
 - 행에 저장되는 유형의 데이터
 - 각 요소에 대한 속성을 나타내며 무결성을 보장
 
-<aside>
-💡 기본키 (PK == Primary Key)
+ 
+## 기본키 (PK == Primary Key)
 
-</aside>
+ 
 
 - 행을 구분할 수 있는 식별자
 - Not Null
 - 수정되어서는 안되는 값
 
-<aside>
-💡 쿼리
+ 
+## 쿼리
 
-</aside>
+ 
 
 - SQL이라는 데이터베이스 전용 언어를 사용하여 작성
 - 데이터 생성, 조회, 수정, 삭제 작업 처리를 위한 명령문
 
-<aside>
-💡 ORM (=Object Relational Mapping)
+ 
+## ORM (=Object Relational Mapping)
 
-</aside>
+ 
 
 - 객체와 데이터베이스를 연결하는 프로그래밍 기법
 - 데이터베이스의 값을 마치 객체처럼 사용할 수 있게 해준다
@@ -85,38 +85,38 @@
 2. 복잡하고 무거운 쿼리는 ORM으로 불가능한 경우도 존재
 > 
 
-<aside>
-💡 JPA (=Java Persistence API)
+ 
+## JPA (=Java Persistence API)
 
-</aside>
+ 
 
 - 자바에서 관계형 데이터베이스를 사용하는 방식을 정의한 인터페이스
 - 인터페이스라서 구현이 필요하다
 - 보통은 구현된 프레임워크를 사용한다
 
-<aside>
-💡 하이버네이트 (=Hibernate)
+ 
+## 하이버네이트 (=Hibernate)
 
-</aside>
+ 
 
 - JPA 인터페이스를 구현한 구현체
 - 자바용 ORM 프레임워크
 - 내부적으로는 JDBC API를 사용
 
-<aside>
-💡 엔티티 (=Entity)
+ 
+## 엔티티 (=Entity)
 
-</aside>
+ 
 
 - 데이터베이스의 테이블과 매핑되는 객체
 - 그냥 자바 객체이지만 테이블과 연결된다는 특징이 있어 따로 구분
 - 객체이긴 하지만 데이터베이스에 영향을 미치는 쿼리를 실행하는 객체
 - 엔티티는 반드시 기본 생성자가 있어야 한다 (public or protected)
 
-<aside>
-💡 엔티티 매니저 (=Entity Manager)
+ 
+## 엔티티 매니저 (=Entity Manager)
 
-</aside>
+ 
 
 - 엔티티를 관리
 - 데이터베이스와 애플리케이션 사이에서 객체를 생성, 수정, 삭제 등을 하는 역할
@@ -126,10 +126,10 @@
 엔티티 매니저는 Spring Data JPA에서 관리 → 직접 관리할 필요 X
 > 
 
-<aside>
-💡 영속성 컨텍스트
+ 
+## 영속성 컨텍스트
 
-</aside>
+ 
 
 - 엔티티 매니저는 엔티티를 영속성 컨텍스트에 저장한다
 - 엔티티를 관리하는 가상의 공간
@@ -169,10 +169,10 @@
 
 공통점 : 데이터베이스의 접근을 최소화하여 부담을 줄인다(성능을 높인다)
 
-<aside>
-💡 엔티티의 4가지 상태
+ 
+## 엔티티의 4가지 상태
 
-</aside>
+ 
 
 1. 비영속 상태
     - 영속성 컨텍스트와 전혀 관계가 없는 상태
@@ -190,26 +190,26 @@
     - 영속성 컨텍스트와 데이터베이스에서 삭제
     - remove() 메서드
 
-<aside>
-💡 스프링 데이터 (=Spring Data)
+ 
+## 스프링 데이터 (=Spring Data)
 
-</aside>
+ 
 
 - 데이터베이스 사용 기능을 클래스 레벨에서 추상화하여 비즈니스 로직에 더 집중할 수 있게 한다
 
-<aside>
-💡 스프링 데이터 JPA (=Spring Data JPA)
+ 
+## 스프링 데이터 JPA (=Spring Data JPA)
 
-</aside>
+ 
 
 - JpaRepository ← PagingAndSortingRepository
 - JpaRepository<Entity Name, Entity PK type>
 - JPA를 쓰기 편하게 만들어놓은 모듈
 
-<aside>
-💡 @GeneratedValue
+ 
+## @GeneratedValue
 
-</aside>
+ 
 
 - AUTO (default) : 선택한 데이터베이스 방언에 따라 방식을 자동으로 선택
 - IDENTITY : 기본키 생성을 데이터베이스에 위임 (= AUTO_INCREMENT)
