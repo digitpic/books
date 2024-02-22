@@ -1,22 +1,22 @@
 
-<aside>
-💡 @EnableJpaAuditing
+ 
+ ## @EnableJpaAuditing
 
-</aside>
+ 
 
 - CreatedAt, UpdatedAt 자동 업데이트
 
-<aside>
-💡 @CreatedDate
+ 
+ ## @CreatedDate
 
-</aside>
+ 
 
 - 생성 시간을 저장하는 애너테이션
 
-<aside>
-💡 @LastModifiedDate
+ 
+ ## @LastModifiedDate
 
-</aside>
+ 
 
 - 수정 시간을 저장하는 애너테이션
 
