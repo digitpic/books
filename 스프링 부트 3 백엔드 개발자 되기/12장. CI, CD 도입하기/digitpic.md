@@ -71,20 +71,20 @@ jobs:
         with:
           format: YYYY-MM-DDTHH-mm-ss
           utcOffset: "+09:00"
-			
-	# 배포용 패키지 경로 저장
-	- name: Set artifact
-          run: echo "artifact=$(ls ./build/libs)" >> $GITHUB_ENV
 
-	# 빈스토크 배포
-	- name: Beanstalk Deploy
-          uses: einaregilsson/beanstalk-deploy@v20
-          with:
-	    aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-	    aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-	    application_name: springboot-developer
-	    environment_name: springboot-developer-env
-	    version_label: github-action-${{steps.current-time.outputs.formattedTime}}
-	    region: ap-northeast-2
-	    deployment_pakage: ./build/libs/${{env.artifact}}
+      # 배포용 패키지 경로 저장
+      - name: Set artifact
+        run: echo "artifact=$(ls ./build/libs)" >> $GITHUB_ENV
+	
+      # 빈스토크 배포
+      - name: Beanstalk Deploy
+        uses: einaregilsson/beanstalk-deploy@v20
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: springboot-developer
+          environment_name: springboot-developer-env
+          version_label: github-action-${{steps.current-time.outputs.formattedTime}}
+          region: ap-northeast-2
+          deployment_pakage: ./build/libs/${{env.artifact}}
 ```
