@@ -15,7 +15,7 @@
 
 ## .github/workflows/ci.yml
 
-```json
+```
 name: CI
 
 on:
@@ -39,7 +39,7 @@ jobs:
 
 ## .github/workflows/cicd.yml
 
-```json
+```
 name: CI/CD
 
 on:
@@ -56,35 +56,35 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-			# 실행 권한 주기
+      # 실행 권한 주기
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-			# 빌드
+      # 빌드
       - name: Build with Gradle
         run: ./gradlew clean build
 
-			# 현재 시간 가져오기
+      # 현재 시간 가져오기
       - name: Get current time
         uses: josStorer/get-current-time@v2.0.2
         id: current-time
         with:
-					format: YYYY-MM-DDTHH-mm-ss
-					utcOffset: "+09:00"
+          format: YYYY-MM-DDTHH-mm-ss
+          utcOffset: "+09:00"
 			
-			# 배포용 패키지 경로 저장
-			- name: Set artifact
-				run: echo "artifact=$(ls ./build/libs)" >> $GITHUB_ENV
+	# 배포용 패키지 경로 저장
+	- name: Set artifact
+          run: echo "artifact=$(ls ./build/libs)" >> $GITHUB_ENV
 
-			# 빈스토크 배포
-			- name: Beanstalk Deploy
-				uses: einaregilsson/beanstalk-deploy@v20
-				with:
-					aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-					aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-					application_name: springboot-developer
-					environment_name: springboot-developer-env
-					version_label: github-action-${{steps.current-time.outputs.formattedTime}}
-					region: ap-northeast-2
-					deployment_pakage: ./build/libs/${{env.artifact}}
+	# 빈스토크 배포
+	- name: Beanstalk Deploy
+          uses: einaregilsson/beanstalk-deploy@v20
+          with:
+	    aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+	    aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+	    application_name: springboot-developer
+	    environment_name: springboot-developer-env
+	    version_label: github-action-${{steps.current-time.outputs.formattedTime}}
+	    region: ap-northeast-2
+	    deployment_pakage: ./build/libs/${{env.artifact}}
 ```
